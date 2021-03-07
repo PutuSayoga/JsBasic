@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("let");
+        console.log("valid:")
+        let a;
+        a = 5;
+        console.log(a*10);
+
+        console.log("tidak valid:")
+        try {
+            b = 5;
+            console.log(b*10);
+            let b;
+        }
+        catch(err) {
+            console.log(err.name + ": " + err.message);
+        }
+
+        console.log("deklarasi ulang tidak valid (komen saja kalau ingin tau outputnya):")
+        try {
+            let c = 3;
+            let c = 6;
+            console.log(c);
+        }
+        catch(err) {
+            console.log(err.name + ": " + err.message);
+        }
+
+        console.log("pindah scope tidak valid:")
+        try {
+            if(true){
+                let d = 5;
+            }
+            console.log(d);
+        }
+        catch(err) {
+            console.log(err.name + ": " + err.message);
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("var");
+        console.log("valid:")
+        var a;
+        a = 5;
+        console.log(a*10);
+
+        console.log("juga valid:")
+        b = 5;
+        console.log(b*10);
+        var b;
+
+        console.log("deklarasi ulang juga valid:")
+        var c = 3;
+        var c = 6;
+        console.log(c)
+
+        console.log("pindah scope juga valid:")
+        if(true){
+            var d = 5;
+        }
+        console.log(d);
+    </script>
+    
+</body>
+</html>
