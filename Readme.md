@@ -72,6 +72,36 @@ JavaScript (js)
     - Isi array merupakan kumpuan data bertipe sama
     - deklarasi => let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
                    let fruits = new Array("apple", "banana", "citrus", "dragon fruit");
+13a. Akses Data Array
+     - Gunakan index base
+     - numbers[0];
+13b. Mengubah Data Array
+     - Gunakan index;
+     - numbers[0] = 10;
+13c. Menghapus Data Array
+     - Bisa gunakan pop() (hapus dr blkg, mengembalikan nilai), shift() (hapus dari depan, mengembalikan nilai)
+     - numbers.pop(); | numbers.shift();
+13d. Menambah Data ke Dalam Array
+     - Bisa gunakan push() (tambah dr blkg), unshift() (tambah dari depan)
+     - numbers.push(value); | numbers.unshift(value);
+13e. Merubah String ke Array
+     - Merubah string ke char array
+     - Banyak caranya, salah satunya dengan Array.from(string)
+     - let charArray = Array.from("banana");
+13f. Mencari Data Dalam Array
+     - Menentukan suatu elemen ada pada array
+     - fruits.includes("banana"); => case sensitive
+13g. Mengurutkan Data Dalam Array
+     - Diurut berdasarkan alphabet
+     - fruits.sort();
+     - Untuk kasus Number => [1, 3, 13, 4, 2, 35, 110], jika menggunakan sort() akan [1, 110, 13, 2, 3, 35, 4]. Untuk mengatasi itu tambahkan callback =>  [1, 3, 13, 4, 2, 35, 110].sort((a,b) => a-b)
+13h. Array Slice
+     - Memperoleh nilai dalam array
+     - fruits.slice(1, 3); => mengembalikan nilai dari index [parameter awal] sampai [parameter akhir-1]
+     - fruits.slice(1);    => mengembalikan nilai dari index [parameter awal] sampai akhir array
+13i. Array Reverse
+     - Membalikkan urutan array
+     - fruits.reverse();
 14. Tipe Data Object
     - Berisi kumpulan key dan value
     - Akses dengan key base
@@ -81,3 +111,26 @@ JavaScript (js)
                         age: 37,
                         hobbies: ["photograpy", "genealogy"]
                      };
+14a. Akses Data Object
+     - Akses data dalam object bisa melalui 2 cara
+       > menggunakan dot (.) => person.name;
+       > menggunakan array (['']) => person['name'];
+     - Akses data object dengan array memiliki kelebihan, yaitu kita bisa mengassign string variabel key ke sebuah variabel lain
+14b. Merubah Data Dalam Object
+     - Assign dengan mengakses keynya
+     - person.age = 40; | person['age'] = 40;
+15. Operasi Matematika
+    - Tambah (+), kurang (-), kali (*), bagi(/), sisa bagi/modulus (%)
+16. Operasi Perbandingan
+    - Lebih kecil dari (<), lebih kecil/sama dengan (<=), lebih besar (>), lebih besar/sama dengan (>=), sama dengan (==) tidak mengecek tipe data, sama dengan (===) cek tipe datanya juga, tidak sama dengan (!=) tidak mengecek tipe data, tidak sama dengan (!==) cek tipe datanya juga
+    lebih lanjut:
+      (0 ==  '0') // true
+      (0 === '0') // false
+
+      ('' ==  0 ) // true, the string will implicitly be converted to an integer
+      ('' === 0 ) // false, no implicit cast is being made
+17. Operasi Penugasan
+    - Sama dengan (=), tambah sama dengan(+=), kurang sama dengan (-=), kali sama dengan (*=), bagi sama dengan (/=), hasil bagi sama dengan (%=)
+18. Operasi Logika
+    - dan (&&), atau (||), negasi (!), bitwise dan (&) jarang dipakai, bitwise atau (|) jarang dipakai
+
