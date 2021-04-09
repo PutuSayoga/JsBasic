@@ -33,3 +33,51 @@ JavaScript (js)
    - Nilainya tidak dapat diubah dan tidak dapat dideklarasi ulang (jika ada variabel yang sama program tidak akan berjalan)
    - Harus langsung diassign
    - Harus diinstansiasi diawal, jika tidak akan terjadi error (program tidak berjalan)
+7. Tipe Data
+   - Ada beberapa tipe data pada javascript
+8. Tipe Data Number
+   - Pada javascript hanya hanya number yang merupakan tipe data untuk bekerja dengan angka (int, float, double, dll)
+   - contoh: 10 (int), 19.8 (float), 0733 (okta), 0o644, 0x12, 0b1101, NaN (not a number), infinty
+   - deklarasi => let one = 1;
+                  let hundred = new Number(100);
+9. Tipe Data Boolean
+   - benar/salah.
+   - deklarasi => let isDead = false;
+                  let isLife = new Boolean(true);
+10. Tipe Data String
+    - Tidak ada tipe data char, langsung jadi string
+    - deklarasi => let firstWord = "alex";
+                   let secondWord = 'bernard';
+                   let thirdWord = `charlie`;
+                   let forthWord = new String("daniel");
+    - Pakek "" (petik dua) untuk string
+    - Manipulasi string:
+      > concatenate => + (tambah)
+      > format => `` (backtag) dan $ (dolar) => `${firstWord} ${secondWord}`
+      > upperCase => .toUpperCase()
+      > lowerCase => .toLowerCase()
+      > trim => .trim() | .trimStart() | .trimEnd()
+      > repeat => .repeat(number)
+11. Tipe Data Undefined
+    - Merupakan representasi dari value yang tidak ada isinya
+    - Value bawaan ketika mendeklarasikan variable tanpa ada isinya
+    - deklarasi => let emptyVar;
+12. Tipe Data Null
+    - Sama seperti undefined, yang merupakan representasi dari tipe data kosong
+    - Dipakai jika kita MEMANG ingin mendeklarasi tipe data dengan nilai kosong
+    - deklarasi => let nullVariable = null;
+13. Tipe Data Array
+    - Berisi kumpulan data
+    - Akses dengan index base (dimulai dari 0)
+    - Isi array merupakan kumpuan data bertipe sama
+    - deklarasi => let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+                   let fruits = new Array("apple", "banana", "citrus", "dragon fruit");
+14. Tipe Data Object
+    - Berisi kumpulan key dan value
+    - Akses dengan key base
+    - Isi objek bisa apa saja
+    - deklarasi => let person = {
+                        name: "jane",
+                        age: 37,
+                        hobbies: ["photograpy", "genealogy"]
+                     };
