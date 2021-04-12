@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sumAll(...number){
+            return number.reduce((result, value) => result += value);
+        }
+
+        console.log(sumAll(1,2,3,4,5,5,2,1,2,2,4,1,21,312,3,112,3,2,1,2,3,2,1,23,2,12,3,12,3,1,132,31,5,5,));
+    </script>
+</body>
+</html>

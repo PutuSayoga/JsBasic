@@ -67,7 +67,7 @@ JavaScript (js)
 12. Tipe Data Array
     - Berisi kumpulan data
     - Akses dengan index base (dimulai dari 0)
-    - Isi array merupakan kumpuan data bertipe sama
+    - Isi array merupakan kumpulan data bertipe sama (idealnya, namun pada JS bisa digabung sesuka hati)
     - deklarasi -> let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
                    let fruits = new Array("apple", "banana", "citrus", "dragon fruit");
 12a. Akses Data Array
@@ -218,6 +218,100 @@ Note: hati-hati saat menggunakan perulangan karena bisa menyebabkan infinit loop
                    });
 29. Array Map
     - Digunakan untuk membuat array baru dari array sebelumnya
-    - Melakukan perulangan untuk setiap nilai pada array
+    - Merupakan sebuah function dalam Array
     - Menampung hasil data dalam callback function
     - deklarasi -> let citiesToUpperCase = cities.map((city) => city.toUpperCase());
+30. Array Filter
+    - Mengembalikan array baru berisi nilai dengan kondisi tertentu
+    - Merupakan sebuah function dalam Array
+    - Menampung hasil data dalam callback function
+    - Hanya nilai yang memenuhi syarat yang akan dieksekusi
+    - deklarasi -> let citiesInJawa = cities.filter((city) => city !== "Bali");
+31. Array Reduce
+    - Mengembalikan nilai tunggal dari sebuah array dengan melakukan suatu operasi
+    - Mengeksekusi array dari kiri ke kanan
+    - Kembalian dari reduce disimpan pada sebuah akumulator (biasanya diberi nama result)
+    - Nilai awal akumulator bisa di setting dengan default undefined
+    - deklarasi -> let sumArray = numbers.reduce((result, bil) => result += bil);
+Perulangan dan manipulasi object
+32. Object For In
+    - Melakukan perulangan properti dalam suatu object
+    - deklarasi -> for(let key in person){
+                     doSomething();
+                   }
+33. Object Assign
+    - Mengembalikan array baru dengan menggabungkan/menyalin object lain
+    - deklarasi -> let newPerson = Object.assign({newObject_optional}, person);
+34. Object Keys
+    - Mengembalikan array baru yang berisi key (string) dari suatu object
+    - deklarasi -> let personKeys = Object.keys(person);
+35. Object Values
+    - Mengembalikan array baru yang berisi value dari suatu object
+    - deklarasi -> let personValues = Object.values(person);
+36. Object Entries
+    - Mengembalikan array 2 dimensi yang berisi key dan value suatu object
+    - deklarasi -> let personEntries = Object.entries(person);
+37. Function Declaration
+    - Prosedure untuk melakukan sebuah tugas
+    - Berfungsi untuk mengurangi penulisan code yang sama berulang-ulang
+    - Bisa juga disebut function statement/ function definition
+    - Save for later use
+    - deklarasi -> function namaFuction(parameter){
+                     statement;
+                   }
+38. Function Expression
+    - Function dengan menggunakan nama variabel sebagai nama functionnya
+    - Function ini terdiri dari variabel dengan value anonymous function
+    - Urutan penulisan sangat penting, Karna tidak bisa dipakai sebelum dideklarasi
+    - Mendefinisikan scope ulang sehingga saat eksekusi berada di scope global
+    - deklarasi -> let myFunction = function(parameter){
+                     statement;
+                   }
+39. Arrow Function
+    - Versi lebih pendek dari pada function expression
+    - Tidak mendefinisikan scope ulang
+    - Sangat dianjurkan selalu memakai arrow function untuk menghindari ambiguitas
+    - deklarasi -> let myArrow = (parameter) => {
+                     statement;
+                   }
+                -> let my1ParameterArrow = parameter => statement; (biasanya untuk function dengan 1 parameter & 1 line statement)
+    - Tetap pakai cara deklarasi pertama!!
+Note tambahan: https://www.youtube.com/watch?v=h33Srr5J9nY
+40. Parameter Function
+    - Secara harfiah kita bisa memasukkan apa saja ke dalam parameter function
+      > Single value
+      > function lain
+      > parameter array -> tambahkan ... (titik 3x) -> ...number
+41. Try Catch Finaly
+    - Mengelola error agar program tetap berjalan
+    - Minimal harus ada Try-Catch / Try-Finaly / ketiganya
+    - Jika ada error maka akan masuk ke catch
+    - Finaly akan otomatis berjalan pada akhir eksekusi, baik saat kode berhasil dijalankan ataupun terjadi error
+    - deklarasi -> try{ 
+                     doSomething();
+                   } catch (exception){
+                     doSomethingIfError();
+                   } finaly {
+                     finalyDoSomething();
+                   }
+42. Throw
+    - Berfungsi untuk mengeluarkan error pada waktu yang diinginkan
+    - Ketika dieksekusi akan mengeluarkan error
+    - Bisa dicustome
+    - deklarasi -> throw new Error(message);
+43. Console Time & TimeEnd
+    - Mengembalikan berapa lama suatu function dijalankan
+    - Waktu yang dihasilkan dalam bentuk ms (mili second)
+    - deklarasi -> console.time(namaString);
+                   function
+                   console.timeEnd(namaString);
+44. Console Group & GroupEnd
+    - Berfungsi untuk mencetak inline group
+    - Selama belum ketemu groupEnd() maka code yang dijalankan akan berada di dalam indentasi yang sama
+    - deklarasi -> console.group();
+                   function
+                   console.groupEnd();
+45. Function Callback
+    - Function yang dimasukkan ke dalam function lain sebagai sebuah argumen
+    - deklarasi -> function someFunction(() => console.log("this is callback"));
+Note: function someFuction memiliki callback yang berupa anonymous function yang mencetak "this is callback"
