@@ -24,15 +24,15 @@
             console.log(err.name + ": " + err.message);
         }
 
-        console.log("deklarasi ulang tidak valid (komen saja kalau ingin tau outputnya):")
-        try {
-            let c = 3;
-            let c = 6;
-            console.log(c);
-        }
-        catch(err) {
-            console.log(err.name + ": " + err.message);
-        }
+        // console.log("deklarasi ulang tidak valid (komen saja kalau ingin tau outputnya):")
+        // try {
+        //     let c = 3;
+        //     let c = 6;
+        //     console.log(c);
+        // }
+        // catch(err) {
+        //     console.log(err.name + ": " + err.message);
+        // }
 
         console.log("pindah scope tidak valid:")
         try {
@@ -44,6 +44,18 @@
         catch(err) {
             console.log(err.name + ": " + err.message);
         }
+
+        console.log("Coba pindah scope ke child")
+        try{
+            let d = 7;
+            if(true){
+                console.log(d);
+            }
+        }
+        catch(err){
+            console.log(err.name + ": " + err.message);
+        }
+        
     </script>
     
 </body>
